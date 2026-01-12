@@ -23,8 +23,8 @@ class JudicialEventController extends Controller
         }
 
         return response()->json(
-            $query->orderByDesc('date_evenement')->orderByDesc('id')->get()
-        );
+        $query->orderBy('numero', 'asc')->get()
+    );
     }
 
     public function store(Request $request)
